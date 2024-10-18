@@ -1,3 +1,6 @@
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 /* General styles */
 * {
   margin: 0;
@@ -12,7 +15,6 @@ html {
 body {
   font-family: sans-serif;
   background-color: rgba(0, 0, 0, 0.7);
-  height: 300vh;
 }
 
 /* utility classes */
@@ -22,15 +24,16 @@ body {
 
 /* Header */
 header {
-  padding: 1.2rem 2.4rem;
-  /* background-color: #183d3393; */
+  padding: 1.2rem 6rem;
+  max-width: 130rem;
+  margin: auto;
 }
 
 .nav {
   display: flex;
   gap: 1rem;
   list-style: none;
-  align-items: stretch;
+  justify-content: flex-end;
   /* flex-direction: column; */
 }
 
@@ -68,19 +71,21 @@ header {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -55%);
+  transform: translate(-50%, -50%);
   width: 100%;
   height: 100vh;
   box-shadow: 0 0 3rem 1.5rem rgba(0, 0, 0, 0.685);
   border-radius: 2rem;
   flex-direction: column;
   width: 90%;
-  max-width: 100rem;
-  margin: 4rem auto;
-  gap: 1.5rem;
-  background-color: #011a12;
-  padding: 2.4rem;
-  height: 90vh;
+  max-width: 110rem;
+  margin: auto;
+  gap: 1rem;
+  background-color: #185058;
+  padding: 1rem;
+  height: 93vh;
+  align-items: center;
+  justify-content: center;
 }
 .projects a {
   display: block;
@@ -91,7 +96,7 @@ header {
   transition: all 300ms;
 }
 .projects img {
-  max-height: 26vh;
+  max-height: 28vh;
   width: 100%;
   border-radius: 3rem;
 }
@@ -115,4 +120,181 @@ header {
 .projects button:hover {
   transform: rotate(90deg);
   color: #8ec4b3;
+}
+
+/* Hero-section */
+.hero-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  padding: 8rem 0;
+  gap: -2rem;
+  overflow: hidden;
+  max-width: 140rem;
+  margin: auto;
+}
+
+.hero-content {
+  
+}
+
+.hero-content h2 {
+  font-family: "Lobster";
+  font-size: 5.4rem;
+  letter-spacing: 0.4rem;
+  color: #fff;
+  font-weight: 800;
+}
+
+.hero-content p {
+  font-size: 2rem;
+  color: #fffbeb;
+  margin-bottom: 4rem;
+}
+
+.cta-btns {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.btn {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.2rem 2.4rem;
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  overflow: hidden;
+}
+
+.cta-btn {
+  background-color: #76d9e6;
+  color: #0c282c;
+  transition: all 300ms;
+}
+
+.cta-btn:hover {
+  background-color: #89dfe9;
+  outline: 3px solid #061416;
+  outline-offset: 5px;
+}
+
+.overlay-btn {
+  background-color: #123c42;
+  color: #b1e9f1;
+}
+
+ion-icon {
+  color: black;
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translate(0, -50%);
+  background-color: #298e99;
+  height: calc(100% - 2.4rem);
+  transition: all 0.5s;
+  padding: 1.2rem 0;
+  width: 0;
+}
+
+.btn:hover ion-icon {
+  width: 50%;
+  color: black;
+}
+
+.hero-image {
+  position: relative;
+}
+
+.layer1 {
+  position: absolute;
+  top: -10%;
+  left: -25%;
+  width: 170%;
+  opacity: 0.7;
+  z-index: -1;
+  transition: all 400ms;
+
+}
+
+.layer2{
+  position: absolute;
+  top: -5%;
+  left: -30%;
+  width: 170%;
+  z-index: -1;
+  opacity: 0.4;
+  transition: all 400ms;
+}
+
+
+
+.hero-image .profile-picture {
+  max-width: 100%;
+  max-height: 70vh;
+  z-index: -1;
+  transition: all 400ms;
+  outline: 2px solid #0e464e50;
+  border-radius: 50%;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.63);
+}
+
+.hero-image:hover .layer1 {
+  transform: translate(-3%, 0%);
+  opacity: 0.6;
+}
+
+.hero-image:hover .layer2 {
+  transform: translate(3%, 0%);
+  opacity: 0.8;
+}
+
+.hero-image:hover .profile-picture {
+  transform: rotate(-10deg);
+  transform: scale(1.02);
+}
+
+
+/* media queries */
+@media (max-width: 75em) {
+  html {
+    font-size: 52%;
+  }
+}
+
+@media (max-width: 54em) {
+  html {
+    font-size: 57%;
+  }
+  .hero-section {
+    grid-template-columns: 1fr;
+    gap: 7rem;
+  }
+
+  .hero-section .hero-content {
+    text-align: center;
+  }
+
+  .hero-content .cta-btns {
+    justify-content: center;
+  }
+
+  .hero-image .profile-picture {
+    width: 95%;
+    max-height: 60vh;
+  }
+}
+
+@media (max-width: 34em) {
+  .projects {
+    top: 2rem;
+    transform: translate(-50%, 0%);
+    height: 80vh;
+  }
 }
