@@ -1,6 +1,11 @@
 /* import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
+/* 
+My Brand Color: #3bc9db;
+
+*/
+
 /* General styles */
 * {
   margin: 0;
@@ -10,16 +15,37 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: sans-serif;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(3, 10, 15, 0.9);
 }
 
 /* utility classes */
 .hidden {
   display: none !important;
+}
+
+hr {
+  border: none;
+  margin: auto;
+}
+
+hr.big {
+  width: 8rem;
+  border-top: 1.8rem dotted #d1df4f;
+}
+
+hr.small {
+  width: 6rem;
+  border-top: 1.4rem dotted #d1df4f;
+}
+
+.container {
+  max-width: 130rem;
+  margin: auto;
 }
 
 /* Header */
@@ -45,7 +71,7 @@ header {
   text-decoration: none;
   padding: 1.2rem 2.4rem;
   border-radius: 10px;
-  color: #fff;
+  color: #eee;
   box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
 }
 
@@ -56,7 +82,8 @@ header {
   left: 0;
   bottom: 0;
   width: 0;
-  background-color: #7fd8bd81;
+  background-color: hsla(162, 53%, 67%, 0.506);
+  background-color: #298e9980;
   border-radius: inherit;
   transition: all 450ms ease;
 }
@@ -74,14 +101,14 @@ header {
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100vh;
-  box-shadow: 0 0 3rem 1.5rem rgba(0, 0, 0, 0.685);
+  box-shadow: 0 0 1rem 1.2rem rgba(0, 0, 0, 0.4);
   border-radius: 2rem;
   flex-direction: column;
   width: 90%;
   max-width: 110rem;
   margin: auto;
   gap: 1rem;
-  background-color: #185058;
+  background-color: #0c282cf9;
   padding: 1rem;
   height: 93vh;
   align-items: center;
@@ -102,7 +129,7 @@ header {
 }
 
 .projects a:hover {
-  box-shadow: 0.5rem 0.5rem rgb(0, 0, 0);
+  box-shadow: 1rem 0.8rem rgb(0, 0, 0, 0.4);
   transform: scale(1.02);
 }
 
@@ -111,15 +138,15 @@ header {
   top: 1.2rem;
   right: 1.2rem;
   background: none;
-  font-size: 4rem;
-  color: white;
+  font-size: 4.5rem;
+  color: #ebfafb;
   border: none;
   transition: all 0.5s ease;
 }
 
 .projects button:hover {
   transform: rotate(90deg);
-  color: #8ec4b3;
+  color: #89dfe9;
 }
 
 /* Hero-section */
@@ -142,14 +169,15 @@ header {
 .hero-content h2 {
   font-family: "Lobster";
   font-size: 5.4rem;
-  letter-spacing: 0.4rem;
-  color: #fff;
-  font-weight: 800;
+  letter-spacing: 0.6rem;
+  color: #eee;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
 }
 
 .hero-content p {
   font-size: 2rem;
-  color: #fffbeb;
+  color: #ddd;
   margin-bottom: 4rem;
 }
 
@@ -160,6 +188,7 @@ header {
 }
 
 .btn {
+  text-decoration: none;
   position: relative;
   font-size: 2rem;
   font-weight: 600;
@@ -173,20 +202,20 @@ header {
 }
 
 .cta-btn {
-  background-color: #76d9e6;
-  color: #0c282c;
-  transition: all 300ms;
+  background-color: #3bc9db;
+  color: #000;
+  transition: all 0.4s ease-out;
 }
 
 .cta-btn:hover {
-  background-color: #89dfe9;
-  outline: 3px solid #061416;
-  outline-offset: 5px;
+  background-color: #4fcedf;
+  outline: 3px solid #1e656e;
+  outline-offset: 6px;
 }
 
 .overlay-btn {
   background-color: #123c42;
-  color: #b1e9f1;
+  color: #d8f4f8;
 }
 
 ion-icon {
@@ -196,8 +225,8 @@ ion-icon {
   top: 50%;
   right: 0%;
   transform: translate(0, -50%);
-  background-color: #298e99;
-  height: calc(100% - 2.4rem);
+  background-color: #298e99f5;
+  height: 75%;
   transition: all 0.5s;
   padding: 1.2rem 0;
   width: 0;
@@ -217,7 +246,7 @@ ion-icon {
   top: -10%;
   left: -25%;
   width: 170%;
-  opacity: 0.7;
+  opacity: 0.6;
   z-index: -1;
   transition: all 400ms;
 
@@ -237,7 +266,6 @@ ion-icon {
 
 .hero-image .profile-picture {
   max-width: 100%;
-  max-height: 70vh;
   z-index: -1;
   transition: all 400ms;
   outline: 2px solid #0e464e50;
@@ -247,17 +275,67 @@ ion-icon {
 
 .hero-image:hover .layer1 {
   transform: translate(-3%, 0%);
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .hero-image:hover .layer2 {
   transform: translate(3%, 0%);
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 .hero-image:hover .profile-picture {
   transform: rotate(-10deg);
   transform: scale(1.02);
+}
+
+/* About section */
+#about-section {
+  background-image: linear-gradient(to right, rgba(4, 12, 13, 0.93), rgba(5, 16, 18, 0.99)), url("./images/computer-screen.png");
+  width: 100%;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#about-section h2 {
+  font-size: 6rem;
+  font-weight: 700;
+  color: #ddd;
+  margin-bottom: 1.5rem;
+}
+
+#about-section hr.big {
+  margin-bottom: 6rem;
+}
+
+#about-section h3 {
+  font-size: 3.5rem;
+  color: #ccc;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+
+
+
+#about-section p {
+  font-size: 2rem;
+  color: #bbb;
+  margin: 0;
+  text-align: left;
+  line-height: 1.4;
+  padding: 0 10rem;
+}
+
+#about-section .cta-btn {
+  display: inline-block;
+  margin-top: 5rem;
 }
 
 
