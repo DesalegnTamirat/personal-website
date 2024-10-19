@@ -21,6 +21,7 @@ html {
 body {
   font-family: sans-serif;
   background-color: rgba(3, 10, 15, 0.9);
+  background-color: rgba(3, 10, 11, 0.96);
 }
 
 /* utility classes */
@@ -71,7 +72,7 @@ header {
   text-decoration: none;
   padding: 1.2rem 2.4rem;
   border-radius: 10px;
-  color: #eee;
+  color: #b1e9f1;
   box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
 }
 
@@ -290,7 +291,7 @@ ion-icon {
 
 /* About section */
 #about-section {
-  background-image: linear-gradient(to right, rgba(4, 12, 13, 0.93), rgba(5, 16, 18, 0.99)), url("./images/computer-screen.png");
+  background-image: linear-gradient(to right, rgba(5, 5, 5, 0.95), rgba(5 , 5, 5, 0.98)), url("./images/computer-screen.png");
   width: 100%;
   min-height: 100vh;
   background-repeat: no-repeat;
