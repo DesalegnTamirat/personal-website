@@ -36,7 +36,7 @@ hr {
 
 hr.big {
   width: 8rem;
-  border-top: 1.8rem dotted #d1df4f;
+  border-top: 1.8rem dotted #7a8606;
 }
 
 hr.small {
@@ -156,7 +156,7 @@ header {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-items: center;
-  padding: 8rem 0;
+  padding: 8rem;
   gap: -2rem;
   overflow: hidden;
   max-width: 140rem;
@@ -211,7 +211,7 @@ header {
 .cta-btn:hover {
   background-color: #4fcedf;
   outline: 3px solid #1e656e;
-  outline-offset: 6px;
+  outline-offset: 8px;
 }
 
 .overlay-btn {
@@ -219,7 +219,7 @@ header {
   color: #d8f4f8;
 }
 
-ion-icon {
+.overlay-btn ion-icon {
   color: black;
   font-weight: 900;
   position: absolute;
@@ -291,15 +291,15 @@ ion-icon {
 
 /* About section */
 #about-section {
-  background-image: linear-gradient(to right, rgba(5, 5, 5, 0.95), rgba(5 , 5, 5, 0.98)), url("./images/computer-screen.png");
+  background-image: linear-gradient(to right, #c4eff4e6, #c4eff4f2), url("./images/computer-screen.png");
   width: 100%;
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  color: white;
+  color: black;
   text-align: center;
-  padding: 8rem;
+  padding: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -308,7 +308,7 @@ ion-icon {
 #about-section h2 {
   font-size: 6rem;
   font-weight: 700;
-  color: #ddd;
+  color: #000;
   margin-bottom: 1.5rem;
 }
 
@@ -318,7 +318,7 @@ ion-icon {
 
 #about-section h3 {
   font-size: 3.5rem;
-  color: #ccc;
+  color: #111;
   font-weight: 600;
   margin-bottom: 3rem;
 }
@@ -327,7 +327,7 @@ ion-icon {
 
 #about-section p {
   font-size: 2rem;
-  color: #bbb;
+  color: #252525;
   margin: 0;
   text-align: left;
   line-height: 1.4;
@@ -337,17 +337,119 @@ ion-icon {
 #about-section .cta-btn {
   display: inline-block;
   margin-top: 5rem;
+  background-color: #123c42;
+  color: white;
+}
+
+.cta-btn ion-icon {
+  color: white;
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translate(0, -50%);
+  background-color: #3bc9dbf5;
+  height: 75%;
+  transition: all 0.5s;
+  padding: 1.2rem 0;
+  width: 0;
+}
+
+#about-section .cta-btn:hover {
+  outline: none;
+}
+.cta-btn:hover ion-icon {
+  width: 50%;
+  color: black;
+}
+
+/* Contact - section */
+#contact-section {
+  max-width: 130rem;
+  margin: auto;
+  min-height: 100vh;
+  padding: 6rem;
+  text-align: center;
+}
+
+#contact-section h2 {
+  font-size: 6rem;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+#contact-section hr {
+  margin-bottom: 8rem;
+}
+
+.contact-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.contact-details .contact {
+  width: 100%;
+  min-height: 60vh;
+  background-color: #104147;
+  border-radius: 20px;
+  transition: all 0.4s ease-in;
+  clip-path: polygon(0% 0%, 38% 0%, 50% 5%,  50% 0%, 100% 0%, 100% 100%, 0% 100%);
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-details .icon {
+  font-size: 6rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.contact-details h3 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 8rem;
+}
+
+.contact-details p {
+  font-size: 1.6rem;
+}
+
+.contact-details a {
+  text-decoration: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: #15bdd3;
+  border-radius: 10px;
+  transition: all 0.5s;
+  outline: 0 dashed #28c9df;
+}
+
+.contact-details a:hover {
+  outline-offset: 5px;
+  outline-width: 8px;
 }
 
 
 /* media queries */
 @media (max-width: 75em) {
   html {
-    font-size: 52%;
+    font-size: 55%;
   }
+
+  .contact-details {
+    grid-template-columns: 1fr 1fr;
+    padding: 10rem;
+    gap: 5rem;
+  }
+
 }
 
-@media (max-width: 54em) {
+@media (max-width: 66em) {
   html {
     font-size: 57%;
   }
@@ -368,12 +470,24 @@ ion-icon {
     width: 95%;
     max-height: 60vh;
   }
+
+  .contact-details {
+    grid-template-columns: 1fr;
+  }
+
+  #about-section p {
+    padding: 3.5rem;
+  }
 }
 
-@media (max-width: 34em) {
+@media (max-width: 40em) {
   .projects {
     top: 2rem;
     transform: translate(-50%, 0%);
     height: 80vh;
+  }
+
+  #about-section p {
+    padding: 0;
   }
 }

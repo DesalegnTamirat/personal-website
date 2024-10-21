@@ -9,9 +9,9 @@ const Hero = () => {
         <h2>Desalegn Tamirat</h2>
         <p>Passionate Front End developer</p>
         <div className="cta-btns">
-        <button className="btn cta-btn">Hire me
-        </button>
-        <button className="btn overlay-btn"><span></span>Have a chat <ion-icon name="chatbubbles-outline"></ion-icon></button>
+        <a href="#cta-section" className="btn cta-btn">Hire me
+        </a>
+        <a href="#contact-section" className="btn overlay-btn"><span></span>Have a chat <ion-icon name="chatbubbles-outline"></ion-icon></a>
         </div>
       </div>
 

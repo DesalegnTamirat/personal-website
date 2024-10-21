@@ -4,6 +4,7 @@ import Projects from "./components/Projects"
 import "./index.css"
 import Hero from "./components/Hero"
 import Contact from "./components/Contact"
+import About from "./components/About"
 
 const App = () => {
   const [hidden, setHidden] = useState(false);
@@ -15,6 +16,7 @@ const App = () => {
     <Header toggleProject={toggleProject}/>
     <Hero />
     <Projects hidden={hidden} toggleProject={toggleProject}/>
+    <About />
     <Contact />
   </>
   )
