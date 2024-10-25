@@ -1,11 +1,4 @@
 const Contact = () => {
-  const contactDetails = [
-    {
-      icon: "something",
-      title: "telephone",
-      info: "+251979474672",
-    },
-  ];
   return (
     <section id="contact-section">
       <h2>My Contacts</h2>
@@ -15,7 +8,7 @@ const Contact = () => {
           <div className="icon"><ion-icon name="call-outline"></ion-icon></div>
           <h3>Telephone</h3>
           <a href="#">
-            <p>Call me</p>
+            Call me
           </a>
         </div>
         <div className="contact">
@@ -24,7 +17,7 @@ const Contact = () => {
           </div>
           <h3>Email</h3>
           <a href="#">
-            <p>Email me</p>
+            Email me
           </a>
         </div>
         <div className="contact">
@@ -33,7 +26,7 @@ const Contact = () => {
           </div>
           <h3>Git</h3>
           <a href="#">
-            <p>Git me</p>
+            Git me
           </a>
         </div>
         <div className="contact">
@@ -42,7 +35,7 @@ const Contact = () => {
           </div>
           <h3>Linkdin</h3>
           <a href="#">
-            <p>Link me</p>
+            Link me
           </a>
         </div>
       </div>
