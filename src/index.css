@@ -51,7 +51,7 @@ hr.small {
 
 /* Header */
 header {
-  padding: 1.2rem 6rem;
+  padding: 2rem 6rem;
   max-width: 130rem;
   margin: auto;
 }
@@ -95,7 +95,7 @@ header {
 
 /* Projects */
 .projects {
-  position: absolute;
+  position: fixed;
   top: 2rem;
   left: 50%;
   transform: translate(-50%, 0%);
@@ -104,13 +104,14 @@ header {
   margin: auto;
   box-shadow: 0 0 1rem 1.5rem rgba(0, 0, 0, 0.6);
   border-radius: 2.4rem;
-  display: flex;
+   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  background-color: #0c282cf9;
+  gap: 2rem;
+  background-color: rgba(12, 40, 44, 0.96);
   padding: 6rem 3rem;
+  max-height: 100vh;
+  overflow: scroll;
+  z-index: 999;
 }
 .projects a {
   display: block;
@@ -131,7 +132,7 @@ header {
 }
 
 .projects button {
-  position: absolute;
+  position: fixed;
   top: 1.2rem;
   right: 1.2rem;
   background: none;
@@ -198,12 +199,13 @@ header {
 .cta-btn {
   background-color: #3bc9db;
   color: #000;
+  outline: 0 solid #1e656e;
   transition: all 0.4s ease-out;
 }
 
 .cta-btn:hover {
   background-color: #4fcedf;
-  outline: 3px solid #1e656e;
+  outline-width: 4px;
   outline-offset: 8px;
 }
 
@@ -411,7 +413,7 @@ header {
   font-weight: 700;
   text-decoration: none;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
   color: #26e6ff;
   border-radius: 10px;
   transition: all 0.5s;
@@ -419,8 +421,8 @@ header {
 }
 
 .contact-details a:hover {
-  outline-offset: 5px;
-  outline-width: 8px;
+  outline-offset: 0.5rem;
+  outline-width: 0.6rem;
 }
 
 
@@ -513,6 +515,18 @@ header {
 }
 
 @media (max-width: 38em) {
+  header {
+    display: none;
+    padding: 3rem;
+    padding-bottom: 0rem;
+  }
+  .nav {
+    gap: 0.2rem;
+  }
+  .nav a:link, .nav a:visited {
+    font-size: 1.7rem;
+    padding: 1rem 1.6rem;
+  }
   h2 {
     font-size: 4.5rem !important;
   }
