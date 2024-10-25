@@ -516,7 +516,6 @@ header {
 
 @media (max-width: 38em) {
   header {
-    display: none;
     padding: 3rem;
     padding-bottom: 0rem;
   }
