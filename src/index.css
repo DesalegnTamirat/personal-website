@@ -96,12 +96,10 @@ header {
 /* Projects */
 .projects {
   position: absolute;
-  top: 50%;
+  top: 2rem;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
   width: 90%;
-  min-height: 90vh;
-  height: 93vh;
   max-width: 120rem;
   margin: auto;
   box-shadow: 0 0 1rem 1.5rem rgba(0, 0, 0, 0.6);
@@ -112,7 +110,7 @@ header {
   align-items: center;
   gap: 1rem;
   background-color: #0c282cf9;
-  padding: 2rem;
+  padding: 6rem 3rem;
 }
 .projects a {
   display: block;
@@ -123,7 +121,6 @@ header {
   transition: all 300ms;
 }
 .projects img {
-  max-height: 28vh;
   width: 100%;
   border-radius: 3rem;
 }
@@ -289,13 +286,12 @@ header {
 #about-section {
   background-image: linear-gradient(to right, #c4eff4e6, #c4eff4f2), url("./images/computer-screen.png");
   width: 100%;
-  min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   color: black;
   text-align: center;
-  padding: 4rem;
+  padding: 12rem 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -364,8 +360,7 @@ header {
 #contact-section {
   max-width: 130rem;
   margin: auto;
-  min-height: 100vh;
-  padding: 4rem 10rem;
+  padding: 12rem 10rem;
   text-align: center;
 }
 
@@ -388,7 +383,6 @@ header {
 
 .contact-details .contact {
   width: 100%;
-  min-height: 61vh;
   background-color: #104147;
   border-radius: 20px;
   transition: all 0.4s ease-in;
@@ -458,7 +452,7 @@ header {
   }
 
   #contact-section {
-    padding: 4rem 10rem;
+    padding: 12rem 10rem;
   }
 }
 
@@ -543,7 +537,7 @@ header {
   }
 
   #contact-section {
-    padding: 6rem 8rem;
+    padding: 12rem 8rem;
   }
 
   .contact-details {
