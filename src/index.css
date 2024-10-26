@@ -553,6 +553,10 @@ header {
     font-size: 4.5rem !important;
   }
 
+  .projects {
+    z-index: 99999;
+  }
+
   .hero-section .hero-content {
     padding: 1rem 4rem;
   }
