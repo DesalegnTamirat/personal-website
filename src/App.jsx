@@ -5,6 +5,7 @@ import "./index.css"
 import Hero from "./components/Hero"
 import Contact from "./components/Contact"
 import About from "./components/About"
+import Form from "./components/Form"
 
 const App = () => {
   const [hidden, setHidden] = useState(false);
@@ -18,6 +19,7 @@ const App = () => {
     <Projects hidden={hidden} toggleProject={toggleProject}/>
     <About />
     <Contact />
+    <Form />
   </>
   )
 }
