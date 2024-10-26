@@ -49,19 +49,37 @@ hr.small {
   margin: auto;
 }
 
+
+
 /* Header */
 header {
-  padding: 2rem 6rem;
+  padding: 1rem 6rem;
   max-width: 130rem;
   margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.logo {
+  z-index: 9999;
+}
+
+.logo img {
+  width: 45%;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
 
 .nav {
   display: flex;
   gap: 1rem;
   list-style: none;
-  justify-content: flex-end;
-  /* flex-direction: column; */
 }
 
 .nav a:link, .nav a:visited {
@@ -154,6 +172,7 @@ header {
   align-items: center;
   justify-items: center;
   padding: 8rem;
+  padding-top: 4rem;
   padding-right: 6rem;
   gap: -2rem;
   overflow: hidden;
@@ -516,8 +535,12 @@ header {
 
 @media (max-width: 38em) {
   header {
-    padding: 3rem;
-    padding-bottom: 0rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .logo {
+    text-align: center;
   }
   .nav {
     gap: 0.2rem;
@@ -531,7 +554,7 @@ header {
   }
 
   .hero-section .hero-content {
-    padding: 2rem 4rem;
+    padding: 1rem 4rem;
   }
 
   .cta-btns {

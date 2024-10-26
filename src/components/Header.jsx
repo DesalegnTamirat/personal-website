@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
+import Logo from './Logo';
 
 const Header = ({toggleProject
 }) => {
   return (
     <header>
+      <Logo />
       <ul className="nav">
         <li><a href="#">Home</a></li>
         <li onClick={toggleProject}><a href="#">Projects</a></li>
