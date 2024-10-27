@@ -9,7 +9,7 @@ const Contact = () => {
             <ion-icon name="call-outline"></ion-icon>
           </div>
           <h3>Telephone</h3>
-          <a href="tel:+251979575672">
+          <a href="tel:+251979474672">
             Call me
           </a>
         </div>
